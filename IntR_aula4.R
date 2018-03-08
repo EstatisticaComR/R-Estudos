@@ -1,4 +1,4 @@
-#Aula4
+#Aula4 vídeo https://youtu.be/-TaLdPO4WA8
 #Objetivo: Criar um vetor com as 4 primeiras letras do alfabeto (A,B,C,D)
 
 vetor=c(A,B,C,D) # Maneira errada

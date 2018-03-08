@@ -1,59 +1,100 @@
-##Aula8 - Leitura de arquivos CSV
+##Aula9 - Medidas Estatísticas
+
+#Vídeo 1 <https://youtu.be/LJgsPyCH7-Y>
+#Funções max, min e range
+
+#Vetores 
+
+x=c(seq(2,22,2))
+x
+y=c(seq(22,42,2))
+y
+
+#Matriz
+
+m=cbind(x,y)
+m
+
+#Função max : Retorna o maior elemento de um conjunto de números
+
+max(3,45,7,6,44)
+max(x)
+max(y)
+max(m)
+
+#Função min : Retorna o menor elemento de um conjunto de números
+
+min(3,45,7,6,44)
+min(x)
+min(y)
+min(m)
+
+#Função range : Retorna o menor e o maior valor, respectivamente, de um conjunto de números
+
+range(3,45,7,6,44)
+range(x)
+range(y)
+range(m)
 
 
+#Vídeo 2 Média e Mediana: https://youtu.be/fF-umAG2OXE
 
-# comando na forma geral, tanto para read.csv quanto para read.csv2
+vetor1=c(1:9)
+vetor1
+mean(vetor1)
+median(vetor1)
 
-# read.csv(file="local onde o arquivo csv se encontra no computador", sep="separador de colunas")
+vetor2=c(3,6,4,8,133,82,67,41,166)
+vetor2
+mean(vetor2)
+median(vetor2)
+sort(vetor2)
 
-########
+matriz1=matrix(vetor1,3,3,byrow=T)
+matriz1
 
-#Você deve ter o arquivo csv no seu computador.
-#Use o comando abaixo para fornecer o local do
+mean(matriz1)
 
-local=choose.files() #escolha o arquivo csv, este comando funciona no sistema windows.
-local
+mean(matriz1[1,])
+mean(matriz1[,1])
 
-dados1=read.csv2(file=local)
+apply(matriz1,1,mean)
+apply(matriz1,2,mean)
 
-dados2=read.csv(file=local,sep=";")
+rowMeans(matriz1)
+colMeans(matriz1)
 
-dados1
+matriz2=matrix(c(7,8,5,6,9,20),2,byrow=T)
+matriz2
 
-dados2
-
-#Lendo o arquivo direto da internet
-
-
-dados3=read.csv2(file="http://www.estatisticacomr.uff.br/wp-content/uploads/2015/07/acidentes.csv")
-dados3
+apply(matriz2,1,median)
+apply(matriz2,2,median)
 
 
 ##Exercícios 
 
-#1.Consulte os elementos de dados3 cuja idade seja maior que 35
+M=cbind(x1=1:6, x2=rep(3,6), x3= c(2,2,2,7,7,7))
+M
+
+#1.Obtenha o maior e o menor valor da matriz M
 
 
-#2.Quais elementos de dados3 cuja variável sexo seja f?
+#2.Obtenha a média e o desvio padrão por coluna da matriz M
 
+#3.Obtenha a mediana da matriz M por coluna
 
-#3.Acrescente uma nova coluna ao data frame, acrescentando 5 à idade de cada elemento.
 
 
 ##Respostas:
 
 #1.
-dados3[ , 2][dados3[ ,2]>35]
-#ou
-dados3$idade[dados3$idade>35]
-
-#2.
-dados3$sexo[dados3$sexo=="f"]
-
+range(M)
+#2
+colMeans(M) #média por coluna
+apply(M,2,sd) #desvio padrão por coluna
 
 #3.
-dados3[,5]= dados3[,2]+5
-dados3
+apply(M,2,median) #mediana por coluna
 
 
-#Parabéns, você completou a lição 8. Vá para aula 9 do curso.
+#Parabéns, você completou a lição 9. Vá para aula 10 do curso.

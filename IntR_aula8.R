@@ -1,4 +1,6 @@
 ##Aula8 - Leitura de arquivos CSV
+#vídeo https://youtu.be/Xdtq82tMLqI
+
 
 
 

@@ -1,4 +1,5 @@
-#Aula 3
+#Aula 3 - vídeo https://youtu.be/GWspGA7WK9U
+
 #Objetivo: Criar um vetor numérico 
 
 # Sequência do número 1 ao 10
